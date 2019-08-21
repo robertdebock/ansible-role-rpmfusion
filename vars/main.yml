@@ -3,6 +3,7 @@
 _rpmfusion_distribution_mapping:
   Fedora: fedora
   RedHat: el
+  CentOS: el
 
 rpmfusion_distribution_mapping: "{{ _rpmfusion_distribution_mapping[ansible_distribution] }}"
 
