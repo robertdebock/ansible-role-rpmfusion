@@ -10,7 +10,7 @@
   tasks:
     - name: install a sample package from the free rpmfusion repository
       package:
-        name: mixx
+        name: mixxx
         state: present
       when:
         - ansible_os_family == "RedHat"
