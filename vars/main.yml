@@ -1,0 +1,11 @@
+---
+# vars file for rpmfusion
+_rpmfusion_distribution_mapping:
+  Fedora: fedora
+  RedHat: el
+
+rpmfusion_distribution_mapping: "{{ _rpmfusion_distribution_mapping[ansible_distribution] }}"
+
+rpmfusion_free_repository: "https://download1.rpmfusion.org/free/{{ rpmfusion_distribution_mapping }}/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+
+rpmfusion_nonfree_repository: "https://download1.rpmfusion.org/nonfree/{{ rpmfusion_distribution_mapping }}/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
