@@ -1,9 +1,10 @@
 ---
 # tasks file for rpmfusion
 - name: install free repositories
-  package:
+  yum:
     name: "{{ rpmfusion_free_repository }}"
     state: present
+    validate_certs: no
   register: rpmfusion_install_free_repositories
   until: rpmfusion_install_free_repositories is succeeded
   retries: 3
@@ -12,9 +13,10 @@
     - ansible_os_family == "RedHat"
 
 - name: install nonfree repositories
-  package:
+  yum:
     name: "{{ rpmfusion_nonfree_repository }}"
     state: present
+    validate_certs: no
   register: rpmfusion_install_nonfree_repositories
   until: rpmfusion_install_nonfree_repositories is succeeded
   retries: 3
