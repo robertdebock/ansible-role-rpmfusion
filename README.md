@@ -19,6 +19,21 @@ This example is taken from `molecule/resources/playbook.yml`:
 
   roles:
     - robertdebock.rpmfusion
+
+  tasks:
+    - name: install a sample package from the free rpmfusion repository
+      package:
+        name: mixx
+        state: present
+      when:
+        - ansible_os_family == "RedHat"
+
+    - name: install a sample package from the nonfree rpmfusion repository
+      package:
+        name: amap
+        state: present
+      when:
+        - ansible_os_family == "RedHat"
 ```
 
 The machine you are running this on, may need to be prepared.
