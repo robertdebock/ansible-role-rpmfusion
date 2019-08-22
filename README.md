@@ -21,19 +21,33 @@ This example is taken from `molecule/resources/playbook.yml`:
     - robertdebock.rpmfusion
 
   tasks:
-    - name: install a sample package from the free rpmfusion repository
+    - name: install a package on Fedora from the free rpmfusion repository
       package:
         name: mixxx
         state: present
       when:
-        - ansible_os_family == "RedHat"
+        - ansible_distribution == "Fedora"
 
-    - name: install a sample package from the nonfree rpmfusion repository
+    - name: install a package on CentOS from the free rpmfusion repository
+      package:
+        name: gpac
+        state: present
+      when:
+        - ansible_distribution == "CentOS"
+
+    - name: install a package on Fedora from the nonfree rpmfusion repository
+      package:
+        name: amap
+        state: present
+      when:
+        - ansible_distribution == "Fedora"
+
+    - name: install a package on CentOS from the nonfree rpmfusion repository
       package:
         name: faac
         state: present
       when:
-        - ansible_os_family == "RedHat"
+        - ansible_distribution == "CentOS"
 ```
 
 The machine you are running this on, may need to be prepared.
