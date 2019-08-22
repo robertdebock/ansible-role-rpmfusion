@@ -23,14 +23,14 @@ This example is taken from `molecule/resources/playbook.yml`:
   tasks:
     - name: install a sample package from the free rpmfusion repository
       package:
-        name: mixx
+        name: mixxx
         state: present
       when:
         - ansible_os_family == "RedHat"
 
     - name: install a sample package from the nonfree rpmfusion repository
       package:
-        name: amap
+        name: faac
         state: present
       when:
         - ansible_os_family == "RedHat"

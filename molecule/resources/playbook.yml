@@ -17,7 +17,7 @@
 
     - name: install a sample package from the nonfree rpmfusion repository
       package:
-        name: amap
+        name: faac
         state: present
       when:
         - ansible_os_family == "RedHat"
