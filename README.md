@@ -6,8 +6,8 @@ rpmfusion
 
 Install rpmfusion repositories on your system.
 
-<img src="https://img.shields.io/ansible/role/d/42907"/>
-<img src="https://img.shields.io/ansible/quality/42907"/>
+<img src="https://img.shields.io/ansible/role/d/"/>
+<img src="https://img.shields.io/ansible/quality/"/>
 
 Example Playbook
 ----------------
