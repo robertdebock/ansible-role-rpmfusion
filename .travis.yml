@@ -8,17 +8,19 @@ services:
   - docker
 
 env:
+  global:
+    namespace="robertdebock"
   matrix:
-    - image="docker-centos-systemd" tag="7"
-    - image="docker-redhat-systemd" tag="7"
-    - image="docker-centos-systemd"
-    - image="docker-redhat-systemd"
-    - image="docker-fedora-systemd"
-    - image="docker-fedora-systemd" tag="rawhide"
+    - image="centos" tag="7"
+    - image="redhat" tag="7"
+    - image="centos"
+    - image="redhat"
+    - image="fedora"
+    - image="fedora" tag="rawhide"
 
 matrix:
   allow_failures:
-    - env: image="docker-fedora-systemd" tag="rawhide"
+    - env: image="fedora" tag="rawhide"
 
 cache:
   - pip

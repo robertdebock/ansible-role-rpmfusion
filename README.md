@@ -92,12 +92,12 @@ This role has been tested on these [container images](https://hub.docker.com/):
 
 |container|tag|allow_failures|
 |---------|---|--------------|
-|docker-centos-systemd|7|no|
-|docker-redhat-systemd|7|no|
-|docker-centos-systemd|latest|no|
-|docker-redhat-systemd|latest|no|
-|docker-fedora-systemd|latest|no|
-|docker-fedora-systemd|rawhide|yes|
+|centos|7|no|
+|redhat|7|no|
+|centos|latest|no|
+|redhat|latest|no|
+|fedora|latest|no|
+|fedora|rawhide|yes|
 
 This role has been tested on these Ansible versions:
 
