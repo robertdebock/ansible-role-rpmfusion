@@ -12,9 +12,7 @@ env:
     namespace="robertdebock"
   matrix:
     - image="centos" tag="7"
-    - image="redhat" tag="7"
     - image="centos"
-    - image="redhat"
     - image="fedora"
     - image="fedora" tag="rawhide"
 
