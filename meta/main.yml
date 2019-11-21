@@ -22,7 +22,6 @@ galaxy_info:
   galaxy_tags:
     - rpmfusion
     - centos
-    - el
     - fedora
     - rhel
 
