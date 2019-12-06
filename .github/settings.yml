@@ -1,4 +1,7 @@
 ---
+#
+# Ansible managed
+#
 repository:
   description: Install rpmfusion repositories on your system.
   homepage: https://robertdebock.nl/
