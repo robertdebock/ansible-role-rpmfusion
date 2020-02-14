@@ -1,8 +1,2 @@
 ---
 # handlers file for rpmfusion
-- name: restart rpmfusion
-  service:
-    name: "{{ rpmfusion_service }}"
-    state: restarted
-  when:
-    - ansible_virtualization_type != "docker"
