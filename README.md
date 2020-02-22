@@ -98,7 +98,7 @@ This role has been tested on these [container images](https://hub.docker.com/):
 |---------|----|
 |amazon|all|
 |el|7, 8|
-|fedora|all|
+|fedora|30, 31|
 
 The minimum version of Ansible required is 2.8 but tests have been done to:
 
@@ -106,6 +106,14 @@ The minimum version of Ansible required is 2.8 but tests have been done to:
 - The current version.
 - The development version.
 
+Exceptions
+----------
+
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| fedora:rawhide | Failure downloading https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm, HTTP Error 404: Not Found |
 
 
 Testing
