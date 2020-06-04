@@ -2,9 +2,9 @@
 
 Install rpmfusion repositories on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-rpmfusion.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-rpmfusion)|[![github](https://github.com/robertdebock/ansible-role-rpmfusion/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-rpmfusion/actions)|[![quality](https://img.shields.io/ansible/quality/42907)](https://galaxy.ansible.com/robertdebock/rpmfusion)|[![downloads](https://img.shields.io/ansible/role/d/42907)](https://galaxy.ansible.com/robertdebock/rpmfusion)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-rpmfusion.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-rpmfusion)|[![github](https://github.com/robertdebock/ansible-role-rpmfusion/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-rpmfusion/actions)|[![quality](https://img.shields.io/ansible/quality/42907)](https://galaxy.ansible.com/robertdebock/rpmfusion)|[![downloads](https://img.shields.io/ansible/role/d/42907)](https://galaxy.ansible.com/robertdebock/rpmfusion)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-rpmfusion.svg)](https://github.com/robertdebock/ansible-role-rpmfusion/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
