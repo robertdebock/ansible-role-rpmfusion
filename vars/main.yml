@@ -1,0 +1,19 @@
+---
+# vars file for rpmfusion
+_rpmfusion_distribution_mapping:
+  Amazon: el
+  Fedora: fedora
+  RedHat: el
+  CentOS: el
+
+rpmfusion_distribution_mapping: "{{ _rpmfusion_distribution_mapping[ansible_distribution] }}"
+
+_rpmfusion_distribution_major_version_mapping:
+  "2": 7
+  "2018": 6
+
+rpmfusion_distribution_major_version_mapping: "{{ _rpmfusion_distribution_major_version_mapping[ansible_distribution_major_version] | default(ansible_distribution_major_version) }}"
+
+rpmfusion_free_repository: "https://download1.rpmfusion.org/free/{{ rpmfusion_distribution_mapping }}/rpmfusion-free-release-{{ rpmfusion_distribution_major_version_mapping  }}.noarch.rpm"
+
+rpmfusion_nonfree_repository: "https://download1.rpmfusion.org/nonfree/{{ rpmfusion_distribution_mapping }}/rpmfusion-nonfree-release-{{ rpmfusion_distribution_major_version_mapping }}.noarch.rpm"
