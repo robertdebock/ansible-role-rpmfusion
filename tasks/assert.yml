@@ -1,0 +1,12 @@
+---
+- name: test if rpmfusion_free is set correctly
+  assert:
+    that:
+      - rpmfusion_free is defined
+      - rpmfusion_free | type_debug == "bool"
+
+- name: test if rpmfusion_nonfree is set correctly
+  assert:
+    that:
+      - rpmfusion_nonfree is defined
+      - rpmfusion_nonfree | type_debug == "bool"
