@@ -1,5 +1,6 @@
 ---
 # vars file for rpmfusion
+
 _rpmfusion_distribution_mapping:
   Amazon: el
   Fedora: fedora
