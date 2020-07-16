@@ -8,9 +8,6 @@
     name: "{{ rpmfusion_free_repository }}"
     state: present
     validate_certs: no
-  register: rpmfusion_install_free_repositories
-  until: rpmfusion_install_free_repositories is succeeded
-  retries: 3
   when:
     - rpmfusion_free | bool
     - ansible_os_family == "RedHat"
@@ -20,9 +17,6 @@
     name: "{{ rpmfusion_nonfree_repository }}"
     state: present
     validate_certs: no
-  register: rpmfusion_install_nonfree_repositories
-  until: rpmfusion_install_nonfree_repositories is succeeded
-  retries: 3
   when:
     - rpmfusion_nonfree | bool
     - ansible_os_family == "RedHat"
