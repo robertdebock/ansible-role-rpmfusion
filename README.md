@@ -42,8 +42,15 @@ For verification `molecule/resources/verify.yml` run after the role has been app
   gather_facts: yes
 
   tasks:
-    - name: check if connection still works
-      ping:
+    - name: install a package from the free repository
+      package:
+        name: HandBrake
+        state: present
+
+    - name: install a package from the nonfree repository
+      package:
+        name: faac
+        state: present
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.

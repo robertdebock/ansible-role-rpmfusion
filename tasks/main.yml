@@ -3,11 +3,29 @@
 - name: include assert.yml
   include_tasks: assert.yml
 
+- name: install free gpg key
+  rpm_key:
+    key: "{{ rpmfusion_free_gpgp_key }}"
+    state: present
+  when:
+    - rpmfusion_free | bool
+    - ansible_os_family == "RedHat"
+
+- name: install nonfree gpg key
+  rpm_key:
+    key: "{{ rpmfusion_nonfree_gpgp_key }}"
+    state: present
+  when:
+    - rpmfusion_nonfree | bool
+    - ansible_os_family == "RedHat"
+
 - name: install free repositories
   yum:
     name: "{{ rpmfusion_free_repository }}"
     state: present
     validate_certs: no
+  notify:
+    - yum update cache
   when:
     - rpmfusion_free | bool
     - ansible_os_family == "RedHat"
@@ -17,6 +35,8 @@
     name: "{{ rpmfusion_nonfree_repository }}"
     state: present
     validate_certs: no
+  notify:
+    - yum update cache
   when:
     - rpmfusion_nonfree | bool
     - ansible_os_family == "RedHat"

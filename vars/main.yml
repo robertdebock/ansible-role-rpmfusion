@@ -18,3 +18,7 @@ rpmfusion_distribution_major_version_mapping: "{{ _rpmfusion_distribution_major_
 rpmfusion_free_repository: "https://download1.rpmfusion.org/free/{{ rpmfusion_distribution_mapping }}/rpmfusion-free-release-{{ rpmfusion_distribution_major_version_mapping  }}.noarch.rpm"
 
 rpmfusion_nonfree_repository: "https://download1.rpmfusion.org/nonfree/{{ rpmfusion_distribution_mapping }}/rpmfusion-nonfree-release-{{ rpmfusion_distribution_major_version_mapping }}.noarch.rpm"
+
+rpmfusion_free_gpgp_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-{{ rpmfusion_distribution_mapping }}-{{ rpmfusion_distribution_major_version_mapping }}"
+
+rpmfusion_nonfree_gpgp_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-{{ rpmfusion_distribution_mapping }}-{{ rpmfusion_distribution_major_version_mapping }}"
