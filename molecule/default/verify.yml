@@ -7,14 +7,10 @@
   tasks:
     - name: install a package from the free repository
       package:
-        name: HandBrake
+        name: rpmfusion-free-release-tainted
         state: present
-      when:
-        - ansible_os_family == "RedHat"
 
     - name: install a package from the nonfree repository
       package:
-        name: faac
+        name: rpmfusion-nonfree-release-tainted
         state: present
-      when:
-        - ansible_os_family == "RedHat"
