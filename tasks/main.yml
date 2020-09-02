@@ -9,6 +9,7 @@
     state: present
   when:
     - rpmfusion_free | bool
+    - ansible_distribution in [ "Amazon", "Fedora", "CentOS", "RedHat" ]
 
 - name: install nonfree gpg key
   rpm_key:
@@ -16,6 +17,7 @@
     state: present
   when:
     - rpmfusion_nonfree | bool
+    - ansible_distribution in [ "Amazon", "Fedora", "CentOS", "RedHat" ]
 
 - name: install free repositories
   yum:
@@ -26,6 +28,7 @@
     - yum update cache
   when:
     - rpmfusion_free | bool
+    - ansible_distribution in [ "Amazon", "Fedora", "CentOS", "RedHat" ]
 
 - name: install nonfree repositories
   yum:
@@ -36,3 +39,4 @@
     - yum update cache
   when:
     - rpmfusion_nonfree | bool
+    - ansible_distribution in [ "Amazon", "Fedora", "CentOS", "RedHat" ]
