@@ -8,9 +8,6 @@ galaxy_info:
   min_ansible_version: 2.8
 
   platforms:
-    - name: Alpine
-      versions:
-        - all
     - name: Amazon
       versions:
         - 2018.03
@@ -18,10 +15,6 @@ galaxy_info:
       versions:
         - 7
         - 8
-    - name: Debian
-      versions:
-        - buster
-        - bullseye
     - name: Fedora
       versions:
         - 31
@@ -29,11 +22,6 @@ galaxy_info:
     - name: OpenSUSE
       versions:
         - all
-    - name: Ubuntu
-      versions:
-        - focal
-        - bionic
-        - xenial
 
   galaxy_tags:
     - rpmfusion
