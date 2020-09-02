@@ -44,17 +44,13 @@ For verification `molecule/resources/verify.yml` run after the role has been app
   tasks:
     - name: install a package from the free repository
       package:
-        name: HandBrake
+        name: rpmfusion-free-release-tainted
         state: present
-      when:
-        - ansible_os_family == "RedHat"
 
     - name: install a package from the nonfree repository
       package:
-        name: faac
+        name: rpmfusion-nonfree-release-tainted
         state: present
-      when:
-        - ansible_os_family == "RedHat"
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -103,7 +99,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |amazon|2018.03|
 |el|7, 8|
 |fedora|31, 32|
-|opensuse|all|
 
 The minimum version of Ansible required is 2.8 but tests have been done to:
 

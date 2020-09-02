@@ -9,7 +9,6 @@
     state: present
   when:
     - rpmfusion_free | bool
-    - ansible_os_family == "RedHat"
 
 - name: install nonfree gpg key
   rpm_key:
@@ -17,7 +16,6 @@
     state: present
   when:
     - rpmfusion_nonfree | bool
-    - ansible_os_family == "RedHat"
 
 - name: install free repositories
   yum:
@@ -28,7 +26,6 @@
     - yum update cache
   when:
     - rpmfusion_free | bool
-    - ansible_os_family == "RedHat"
 
 - name: install nonfree repositories
   yum:
@@ -39,4 +36,3 @@
     - yum update cache
   when:
     - rpmfusion_nonfree | bool
-    - ansible_os_family == "RedHat"
