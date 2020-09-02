@@ -46,11 +46,15 @@ For verification `molecule/resources/verify.yml` run after the role has been app
       package:
         name: HandBrake
         state: present
+      when:
+        - ansible_os_family == "RedHat"
 
     - name: install a package from the nonfree repository
       package:
         name: faac
         state: present
+      when:
+        - ansible_os_family == "RedHat"
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.

@@ -9,8 +9,12 @@
       package:
         name: HandBrake
         state: present
+      when:
+        - ansible_os_family == "RedHat"
 
     - name: install a package from the nonfree repository
       package:
         name: faac
         state: present
+      when:
+        - ansible_os_family == "RedHat"
