@@ -2,10 +2,10 @@
 # vars file for rpmfusion
 
 _rpmfusion_distribution_mapping:
-  Amazon: el
-  Fedora: fedora
-  RedHat: el
-  CentOS: el
+  Amazon: &el el
+  Fedora: "{{ ansible_distribution | lower }}"
+  RedHat: *el
+  CentOS: *el
 
 rpmfusion_distribution_mapping: "{{ _rpmfusion_distribution_mapping[ansible_distribution] }}"
 
