@@ -22,7 +22,5 @@ galaxy_info:
 
   galaxy_tags:
     - rpmfusion
-    - centos
-    - redhat
 
 dependencies: []
