@@ -5,3 +5,4 @@
 repository:
   description: Install rpmfusion repositories on your system.
   homepage: https://robertdebock.nl/
+  topics: rpmfusion, ansible, molecule, tox, playbook, hacktoberfest
