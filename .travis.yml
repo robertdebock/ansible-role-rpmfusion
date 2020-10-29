@@ -20,9 +20,7 @@ env:
     - image="amazonlinux" tag="1"
     - image="centos" tag="7"
     - image="centos" tag="latest"
-    - image="fedora" tag="32"
     - image="fedora" tag="latest"
-    - image="fedora" tag="rawhide"
 
 cache:
   - pip
