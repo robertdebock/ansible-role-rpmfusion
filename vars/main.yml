@@ -22,7 +22,7 @@ rpmfusion_distribution_major_version: "{{ _rpmfusion_distribution_major_version[
 # The URL to the gpg key differs, so we need to map distribution to the
 # identifier that rpmfusion uses.
 _rpmfusion_gpgkey:
-  Amazon: &elkey "{{ ansible_distribution_major_version }}"
+  Amazon: &elkey "{{ rpmfusion_distribution_major_version }}"
   Fedora: 2020
   RedHat: *elkey
   CentOS: *elkey
