@@ -40,4 +40,4 @@
       when:
         - rpmfusion_nonfree | bool
   when:
-    - ansible_distribution in ["Amazon", "Fedora", "CentOS", "RedHat"]
+    - ansible_distribution in [ "Amazon", "Fedora", "CentOS", "RedHat" ]
