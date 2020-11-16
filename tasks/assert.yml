@@ -3,12 +3,12 @@
   assert:
     that:
       - rpmfusion_free is defined
-      - rpmfusion_free | type_debug == "bool"
+      - rpmfusion_free is boolean
     quiet: yes
 
 - name: test if rpmfusion_nonfree is set correctly
   assert:
     that:
       - rpmfusion_nonfree is defined
-      - rpmfusion_nonfree | type_debug == "bool"
+      - rpmfusion_nonfree is boolean
     quiet: yes
