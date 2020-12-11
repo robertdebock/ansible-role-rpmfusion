@@ -7,37 +7,38 @@
 
 - name: install free and nonfree
   block:
-    - name: install free gpg key
-      rpm_key:
-        key: "{{ rpmfusion_free_gpgp_key }}"
-        state: present
+    - name: configure free
+      block:
+        - name: install free gpg key
+          rpm_key:
+            key: "{{ rpmfusion_free_gpgp_key }}"
+            state: present
+
+        - name: install free repositories
+          yum:
+            name: "{{ rpmfusion_free_repository }}"
+            state: present
+            validate_certs: no
+          notify:
+            - yum update cache
       when:
         - rpmfusion_free | bool
 
-    - name: install nonfree gpg key
-      rpm_key:
-        key: "{{ rpmfusion_nonfree_gpgp_key }}"
-        state: present
-      when:
-        - rpmfusion_nonfree | bool
 
-    - name: install free repositories
-      yum:
-        name: "{{ rpmfusion_free_repository }}"
-        state: present
-        validate_certs: no
-      notify:
-        - yum update cache
-      when:
-        - rpmfusion_free | bool
+    - name: configure non-free
+      block:
+        - name: install nonfree gpg key
+          rpm_key:
+            key: "{{ rpmfusion_nonfree_gpgp_key }}"
+            state: present
 
-    - name: install nonfree repositories
-      yum:
-        name: "{{ rpmfusion_nonfree_repository }}"
-        state: present
-        validate_certs: no
-      notify:
-        - yum update cache
+        - name: install nonfree repositories
+          yum:
+            name: "{{ rpmfusion_nonfree_repository }}"
+            state: present
+            validate_certs: no
+          notify:
+            - yum update cache
       when:
         - rpmfusion_nonfree | bool
   when:
