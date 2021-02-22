@@ -11,12 +11,12 @@
     - name: configure free
       block:
         - name: install free gpg key
-          rpm_key:
+          ansible.builtin.rpm_key:
             key: "{{ rpmfusion_free_gpgp_key }}"
             state: present
 
         - name: install free repositories
-          yum:
+          ansible.builtin.yum:
             name: "{{ rpmfusion_free_repository }}"
             state: present
             validate_certs: no
@@ -29,12 +29,12 @@
     - name: configure non-free
       block:
         - name: install nonfree gpg key
-          rpm_key:
+          ansible.builtin.rpm_key:
             key: "{{ rpmfusion_nonfree_gpgp_key }}"
             state: present
 
         - name: install nonfree repositories
-          yum:
+          ansible.builtin.yum:
             name: "{{ rpmfusion_nonfree_repository }}"
             state: present
             validate_certs: no
