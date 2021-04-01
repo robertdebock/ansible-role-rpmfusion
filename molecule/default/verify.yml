@@ -6,11 +6,11 @@
 
   tasks:
     - name: install a package from the free repository
-      package:
+      ansible.builtin.package:
         name: rpmfusion-free-release-tainted
         state: present
 
     - name: install a package from the nonfree repository
-      package:
+      ansible.builtin.package:
         name: rpmfusion-nonfree-release-tainted
         state: present
