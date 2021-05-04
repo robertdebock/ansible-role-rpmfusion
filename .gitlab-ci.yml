@@ -23,7 +23,7 @@ molecule:
       - image: "centos"
         tag: "latest"
       - image: "fedora"
-        tag: "latest"
+        tag: "33"
 
 galaxy:
   script:

@@ -11,7 +11,7 @@ on:
       - '*'
   pull_request:
   schedule:
-    - cron: '18 18 18 * *'
+    - cron: '35 18 18 * *'
 
 jobs:
   lint:
@@ -40,7 +40,7 @@ jobs:
           - image: "centos"
             tag: "latest"
           - image: "fedora"
-            tag: "latest"
+            tag: "33"
     steps:
       - name: checkout
         uses: actions/checkout@v2
