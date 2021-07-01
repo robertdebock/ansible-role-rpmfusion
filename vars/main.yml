@@ -7,6 +7,7 @@ _rpmfusion_distribution:
   Fedora: "{{ ansible_distribution | lower }}"
   RedHat: *el
   CentOS: *el
+  Rocky: *el
 
 rpmfusion_distribution: "{{ _rpmfusion_distribution[ansible_distribution] }}"
 
