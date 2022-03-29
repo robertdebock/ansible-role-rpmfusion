@@ -85,14 +85,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-## [Exceptions](#exceptions)
-
-Some roles can't run on a specific distribution or version. Here are some exceptions.
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| fedora:rawhide | Failure downloading https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm, HTTP Error 404: Not Found |
-
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-rpmfusion/issues)
 
