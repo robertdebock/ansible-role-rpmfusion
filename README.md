@@ -1,4 +1,4 @@
-# Ansible role [rpmfusion](#rpmfusion)
+# [Ansible role rpmfusion](#rpmfusion)
 
 Install rpmfusion repositories on your system.
 
