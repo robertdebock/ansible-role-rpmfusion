@@ -1,5 +1,7 @@
 # [Ansible role rpmfusion](#rpmfusion)
 
+> THIS ROLE HAS BEEN ARCHIVED AS OF DEC 2023.
+
 Install rpmfusion repositories on your system.
 
 |GitHub|GitLab|Downloads|Version|
